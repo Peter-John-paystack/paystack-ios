@@ -8,7 +8,7 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -16,8 +16,14 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          curl -L -O https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
-          unzip -o build-wrapper-linux-x86.zip
+          curl -L -O https://sonarcloud.io/static/cpp/build-wrapper-macosx-x86.zip
+          unzip -o build-wrapper-macosx-x86.zip
+          mkdir DerivedData
+          build-wrapper-macosx-x86 --out-dir DerivedData/compilation-database \
+          xcodebuild \
+                -scheme PaystackiOS \
+                -derivedDataPath DerivedData \
+                clean test
           
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
