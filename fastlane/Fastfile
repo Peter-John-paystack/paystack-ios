@@ -36,10 +36,10 @@ desc "Run unit tests"
     slather(cobertura_xml: true,
       scheme: "PaystackiOS",
       proj: "./Paystack.xcodeproj",
-      output_directory: "./sonar-reports",
+      output_directory: "/Users/runner/work/paystack-ios/paystack-ios/DerivedData/Logs/Test/Test-PaystackiOS/",
       workspace: "./Paystack.xcworkspace")
 
-     swiftlint(output_file: "./sonar-reports/swiftlint.txt",
+     swiftlint(output_file: "/Users/runner/work/paystack-ios/paystack-ios/DerivedData/Logs/Test/Test-PaystackiOS/swiftlint.txt",
       ignore_exit_status: true)
      
      sonar(
