@@ -19,8 +19,10 @@ jobs:
           curl -L -O https://sonarcloud.io/static/cpp/build-wrapper-macosx-x86.zip
           unzip -o build-wrapper-macosx-x86.zip
           mkdir DerivedData
-          cd build-wrapper-macosx-x86
           echo $GITHUB_PATH
+          echo "$PATH"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "$PATH/build-wrapper-macosx-x86" >> $GITHUB_PATH
           build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
           xcodebuild \
                 -scheme "PaystackiOS Tests"\
