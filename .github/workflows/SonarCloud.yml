@@ -27,6 +27,7 @@ jobs:
                 -derivedDataPath DerivedData\
                 -enableCodeCoverage "YES"\
                 -archivePath  "./sonar-reports"\
+                -exportPath "./sonar-reports"\
                 -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.4'\
                 test
          
