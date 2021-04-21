@@ -18,23 +18,6 @@ jobs:
         run: |
           curl -L -O https://sonarcloud.io/static/cpp/build-wrapper-macosx-x86.zip
           unzip -o build-wrapper-macosx-x86.zip
-          cd build-wrapper-macosx-x86
-          CWDf="$(pwd)"
-          echo $CWDf
-          mkdir DerivedData
-          echo "Github path"
-          echo $GITHUB_PATH
-          echo "path"
-          echo "$PATH"
-          echo "adding to home bin"
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-          echo "adding path with build wrapper"
-          echo "$PATH/build-wrapper-macosx-x86" >> $GITHUB_PATH
-          echo "$PATH"
-          mkdir "/tmp/new dir"
-          cd "/tmp/new dir"
-          CWD="$(pwd)"
-          echo $CWD
           /Users/runner/work/paystack-ios/paystack-ios/build-wrapper-macosx-x86/build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
           xcodebuild \
                 -scheme "PaystackiOS Tests"\
