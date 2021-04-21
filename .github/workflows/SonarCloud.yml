@@ -26,10 +26,10 @@ jobs:
                 -scheme "PaystackiOS Tests"\
                 -derivedDataPath DerivedData \
                 -enableCodeCoverage" "YES"\
-                -archivePath  "./sonar-reports"\
+                -archivePath  './sonar-reports'\
                 -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.4'\
                 test
-      - name: Run tests
+      - name: SonarCloud Analysis
         run: |
          bundle exec fastlane metrics
           
