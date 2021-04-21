@@ -24,8 +24,9 @@ jobs:
           /Users/runner/work/paystack-ios/paystack-ios/build-wrapper-macosx-x86/build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
           xcodebuild \
                 -scheme "PaystackiOS Tests"\
-                -derivedDataPath "DerivedData"\
-                -enableCodeCoverage" "YES"\
+                -derivedDataPath DerivedData\
+                -enableCodeCoverage "YES"\
+                -archivePath  "./sonar-reports"\
                 -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.4'\
                 test
       - name: SonarCloud Analysis
