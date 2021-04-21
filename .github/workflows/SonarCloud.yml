@@ -35,7 +35,7 @@ jobs:
           cd "/tmp/new dir"
           CWD="$(pwd)"
           echo $CWD
-          #build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
+          /Users/runner/work/paystack-ios/paystack-ios/build-wrapper-macosx-x86/build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
           #xcodebuild \
                # -scheme "PaystackiOS Tests"\
                # -derivedDataPath DerivedData \
