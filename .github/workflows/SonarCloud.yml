@@ -29,13 +29,12 @@ jobs:
                 -archivePath  "./sonar-reports"\
                 -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.4'\
                 test
-      - name: Install Slather
-        run: |
-          gem install slather    
-          brew install sonar-scanner
+         
       - name: SonarCloud Analysis
         run: |
-         bundle exec fastlane metrics
+          gem "slather"    
+          brew install sonar-scanner
+          bundle exec fastlane metrics
           
       #- name: SonarCloud Scan
       #  uses: SonarSource/sonarcloud-github-action@master
