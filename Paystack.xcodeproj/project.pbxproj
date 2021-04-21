@@ -958,6 +958,7 @@
 				TargetAttributes = {
 					045E7C021A5F41DE004751EF = {
 						CreatedOnToolsVersion = 6.1.1;
+						ProvisioningStyle = Manual;
 					};
 					049E84AA1A605D93000B66CD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1299,6 +1300,12 @@
 			baseConfigurationReference = 04F39F0D1AEF2AFE005B926E /* PaystackiOS Tests-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 			};
 			name = Debug;
 		};
@@ -1307,6 +1314,12 @@
 			baseConfigurationReference = 04F39F0E1AEF2AFE005B926E /* PaystackiOS Tests-Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 			};
 			name = Release;
 		};

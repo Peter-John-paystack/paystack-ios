@@ -33,13 +33,18 @@ desc "Run unit tests"
   desc "Sonar Cloud Scanner"
   lane :metrics do
 
+    scan(scheme: "PaystackiOS Tests",
+      code_coverage: true,
+      output_directory: "./sonar-reports",
+      devices: "iPhone 8")
+     
     slather(cobertura_xml: true,
       scheme: "PaystackiOS",
       proj: "./Paystack.xcodeproj",
-      output_directory: "/Users/runner/work/paystack-ios/paystack-ios/DerivedData/Logs/Test/Test-PaystackiOS/",
+      output_directory: "./sonar-reports",
       workspace: "./Paystack.xcworkspace")
 
-     swiftlint(output_file: "/Users/runner/work/paystack-ios/paystack-ios/DerivedData/Logs/Test/Test-PaystackiOS/swiftlint.txt",
+     swiftlint(output_file: "./sonar-reports/swiftlint.txt",
       ignore_exit_status: true)
      
      sonar(
