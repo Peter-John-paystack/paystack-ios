@@ -20,6 +20,7 @@ jobs:
           unzip -o build-wrapper-macosx-x86.zip
           mkdir DerivedData
           cd build-wrapper-macosx-x86
+          echo $GITHUB_PATH
           build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database \
           xcodebuild \
                 -scheme "PaystackiOS Tests"\
