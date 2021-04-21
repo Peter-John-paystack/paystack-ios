@@ -32,7 +32,7 @@ jobs:
          
       - name: SonarCloud Analysis
         run: |
-          gem "slather"    
+          gem install slather  
           brew install sonar-scanner
           bundle exec fastlane metrics
           
