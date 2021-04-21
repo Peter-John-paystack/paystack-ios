@@ -33,12 +33,6 @@ desc "Run unit tests"
   desc "Sonar Cloud Scanner"
   lane :metrics do
 
-    scan(scheme: "PaystackiOS Tests",
-      code_coverage: true,
-      output_directory: "./sonar-reports",
-      xcodebuild_command: "env NSUnbufferedIO=YES build-wrapper-macosx-x86 --out-dir DerivedData\compilation-database xcodebuild",
-      devices: "iPhone 8")
-     
     slather(cobertura_xml: true,
       scheme: "PaystackiOS",
       proj: "./Paystack.xcodeproj",
