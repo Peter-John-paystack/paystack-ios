@@ -26,6 +26,11 @@ Description of what the lane does
 fastlane ios unit_tests
 ```
 Run unit tests
+### ios metrics
+```
+fastlane ios metrics
+```
+Sonar Cloud Scanner
 
 ----
 
